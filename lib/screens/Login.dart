@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:elaaj_app/screens/Home.dart';
 import 'package:elaaj_app/screens/Signup.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +17,7 @@ class _LoginState extends State<Login> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 115, 0, 138),
+        backgroundColor: const Color.fromARGB(255, 115, 0, 138),
         appBar: null,
         body: Column(
           children: [
@@ -38,7 +40,7 @@ class _LoginState extends State<Login> {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Signup(),
+                              builder: (context) => const Signup(),
                             ));
                       },
                       child: const Text(
@@ -48,7 +50,7 @@ class _LoginState extends State<Login> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             const Center(
@@ -123,7 +125,7 @@ class _LoginState extends State<Login> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Home(),
+                                builder: (context) => const Home(),
                               ));
                         },
                         child: const Text(

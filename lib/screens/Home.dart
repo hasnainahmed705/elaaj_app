@@ -1,9 +1,10 @@
+// ignore_for_file: file_names
+
 import 'package:elaaj_app/screens/ContactUs.dart';
 import 'package:elaaj_app/screens/Homepage.dart';
 import 'package:elaaj_app/screens/Profile.dart';
 import 'package:elaaj_app/screens/Search.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -15,7 +16,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
-  final List<Widget> childrens = [HomePage(), Search(), ContactUs(), Profile()];
+  final List<Widget> childrens = const [
+    HomePage(),
+    Search(),
+    ContactUs(),
+    Profile()
+  ];
   void onBottomNavTap(int index) {
     setState(() {
       _currentIndex = index;
@@ -28,6 +34,11 @@ class _HomeState extends State<Home> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         key: _globalKey,
+        floatingActionButton: FloatingActionButton(
+            elevation: 5.0,
+            backgroundColor: const Color.fromARGB(255, 115, 0, 138),
+            child: const Icon(Icons.phone),
+            onPressed: () {}),
         drawer: Drawer(
             elevation: 5.0,
             backgroundColor: Colors.white,
@@ -42,100 +53,100 @@ class _HomeState extends State<Home> {
               ),
               ListTile(
                 onTap: () {},
-                selectedTileColor: Color.fromARGB(255, 115, 0, 138),
+                selectedTileColor: const Color.fromARGB(255, 115, 0, 138),
                 tileColor: Colors.white,
                 minLeadingWidth: 5.0,
-                title: Text(
+                title: const Text(
                   'Your Appointments',
                   style: TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
                 ),
                 dense: true,
-                leading: Icon(
+                leading: const Icon(
                   Icons.approval_outlined,
                   color: Color.fromARGB(255, 115, 0, 138),
                 ),
               ),
-              Divider(height: 1.0, thickness: 1.0),
+              const Divider(height: 1.0, thickness: 1.0),
               ListTile(
                 dense: true,
                 onTap: () {},
-                selectedTileColor: Color.fromARGB(255, 115, 0, 138),
+                selectedTileColor: const Color.fromARGB(255, 115, 0, 138),
                 tileColor: Colors.white,
                 minLeadingWidth: 5.0,
-                title: Text(
+                title: const Text(
                   'Search Hospital',
                   style: TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
                 ),
-                leading: Icon(
+                leading: const Icon(
                   Icons.local_hospital_outlined,
                   color: Color.fromARGB(255, 115, 0, 138),
                 ),
               ),
-              Divider(height: 1.0, thickness: 1.0),
+              const Divider(height: 1.0, thickness: 1.0),
               ListTile(
                 onTap: () {},
-                selectedTileColor: Color.fromARGB(255, 115, 0, 138),
+                selectedTileColor: const Color.fromARGB(255, 115, 0, 138),
                 tileColor: Colors.white,
                 minLeadingWidth: 5.0,
                 dense: true,
-                title: Text(
+                title: const Text(
                   'Privacy Policy',
                   style: TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
                 ),
-                leading: Icon(
+                leading: const Icon(
                   Icons.policy_outlined,
                   color: Color.fromARGB(255, 115, 0, 138),
                 ),
               ),
-              Divider(height: 1.0, thickness: 1.0),
+              const Divider(height: 1.0, thickness: 1.0),
               ListTile(
                 onTap: () {},
-                selectedTileColor: Color.fromARGB(255, 115, 0, 138),
+                selectedTileColor: const Color.fromARGB(255, 115, 0, 138),
                 tileColor: Colors.white,
                 minLeadingWidth: 5.0,
                 dense: true,
-                title: Text(
+                title: const Text(
                   'Contact Us',
                   style: TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
                 ),
-                leading: Icon(
+                leading: const Icon(
                   Icons.contact_support_outlined,
                   color: Color.fromARGB(255, 115, 0, 138),
                 ),
               ),
-              Divider(height: 1.0, thickness: 1.0),
+              const Divider(height: 1.0, thickness: 1.0),
               ListTile(
                 onTap: () {},
-                selectedTileColor: Color.fromARGB(255, 115, 0, 138),
+                selectedTileColor: const Color.fromARGB(255, 115, 0, 138),
                 tileColor: Colors.white,
                 minLeadingWidth: 5.0,
                 dense: true,
-                title: Text(
+                title: const Text(
                   'About Us',
                   style: TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
                 ),
-                leading: Icon(
+                leading: const Icon(
                   Icons.info_outline,
                   color: Color.fromARGB(255, 115, 0, 138),
                 ),
               ),
-              Divider(height: 1.0, thickness: 1.0),
+              const Divider(height: 1.0, thickness: 1.0),
               ListTile(
                 onTap: () {},
-                selectedTileColor: Color.fromARGB(255, 115, 0, 138),
+                selectedTileColor: const Color.fromARGB(255, 115, 0, 138),
                 tileColor: Colors.white,
                 minLeadingWidth: 5.0,
                 dense: true,
-                title: Text(
+                title: const Text(
                   'Logout',
                   style: TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
                 ),
-                leading: Icon(
+                leading: const Icon(
                   Icons.login_outlined,
                   color: Color.fromARGB(255, 115, 0, 138),
                 ),
               ),
-              Divider(height: 1.0, thickness: 1.0),
+              const Divider(height: 1.0, thickness: 1.0),
             ])),
         appBar: AppBar(
             elevation: 5.0,
@@ -143,12 +154,12 @@ class _HomeState extends State<Home> {
                 onPressed: () {
                   _globalKey.currentState?.openDrawer();
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.menu,
                   color: Color.fromARGB(255, 115, 0, 138),
                 )),
             centerTitle: true,
-            title: SizedBox(
+            title: const SizedBox(
                 height: 25,
                 child: Image(
                     image: AssetImage('lib/assets/images/final_logo_2.png'))),
@@ -170,8 +181,8 @@ class _HomeState extends State<Home> {
             showUnselectedLabels: true,
             currentIndex: _currentIndex,
             onTap: onBottomNavTap,
-            selectedItemColor: Color.fromARGB(255, 115, 0, 138),
-            unselectedItemColor: Color.fromARGB(255, 114, 114, 114),
+            selectedItemColor: const Color.fromARGB(255, 115, 0, 138),
+            unselectedItemColor: const Color.fromARGB(255, 114, 114, 114),
             type: BottomNavigationBarType.shifting,
             unselectedLabelStyle:
                 const TextStyle(color: Color.fromARGB(255, 114, 114, 114)),

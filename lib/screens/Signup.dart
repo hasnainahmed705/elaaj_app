@@ -1,7 +1,8 @@
+// ignore_for_file: file_names
+
 import 'package:elaaj_app/screens/Login.dart';
 import 'package:elaaj_app/screens/Registeration.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -16,7 +17,7 @@ class _SignupState extends State<Signup> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 115, 0, 138),
+        backgroundColor: const Color.fromARGB(255, 115, 0, 138),
         appBar: null,
         body: Column(
           children: [
@@ -39,7 +40,7 @@ class _SignupState extends State<Signup> {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Login(),
+                              builder: (context) => const Login(),
                             ));
                       },
                       child: const Text(
@@ -147,7 +148,7 @@ class _SignupState extends State<Signup> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Registeration(),
+                                builder: (context) => const Registeration(),
                               ));
                         },
                         child: const Text(

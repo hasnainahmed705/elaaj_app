@@ -1,6 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:elaaj_app/screens/Home.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Registeration extends StatefulWidget {
   const Registeration({super.key});
@@ -36,15 +37,15 @@ class _RegisterationState extends State<Registeration> {
               padding: const EdgeInsets.only(left: 70, right: 70),
               child: TextFormField(
                 style: const TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
-                cursorColor: Color.fromARGB(255, 115, 0, 138),
+                cursorColor: const Color.fromARGB(255, 115, 0, 138),
                 decoration: InputDecoration(
                     hintText: "First Name",
                     prefixIcon: const Icon(Icons.person),
-                    prefixIconColor: Color.fromARGB(255, 115, 0, 138),
+                    prefixIconColor: const Color.fromARGB(255, 115, 0, 138),
                     hintStyle: const TextStyle(
                         color: Color.fromARGB(255, 201, 201, 201)),
                     suffixIcon: const Icon(Icons.close),
-                    suffixIconColor: Color.fromARGB(255, 115, 0, 138),
+                    suffixIconColor: const Color.fromARGB(255, 115, 0, 138),
                     enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                             color: Color.fromARGB(255, 115, 0, 138),
@@ -61,15 +62,15 @@ class _RegisterationState extends State<Registeration> {
               padding: const EdgeInsets.only(left: 70, right: 70),
               child: TextFormField(
                 style: const TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
-                cursorColor: Color.fromARGB(255, 115, 0, 138),
+                cursorColor: const Color.fromARGB(255, 115, 0, 138),
                 decoration: InputDecoration(
                     hintText: "Last Name",
                     prefixIcon: const Icon(Icons.person),
-                    prefixIconColor: Color.fromARGB(255, 115, 0, 138),
+                    prefixIconColor: const Color.fromARGB(255, 115, 0, 138),
                     hintStyle: const TextStyle(
                         color: Color.fromARGB(255, 201, 201, 201)),
                     suffixIcon: const Icon(Icons.close),
-                    suffixIconColor: Color.fromARGB(255, 115, 0, 138),
+                    suffixIconColor: const Color.fromARGB(255, 115, 0, 138),
                     enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                             color: Color.fromARGB(255, 115, 0, 138),
@@ -86,15 +87,15 @@ class _RegisterationState extends State<Registeration> {
               padding: const EdgeInsets.only(left: 70, right: 70),
               child: TextFormField(
                 style: const TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
-                cursorColor: Color.fromARGB(255, 115, 0, 138),
+                cursorColor: const Color.fromARGB(255, 115, 0, 138),
                 decoration: InputDecoration(
                     hintText: "CNIC (i.e xxxxx-xxxxxxx-x)",
                     prefixIcon: const Icon(Icons.admin_panel_settings_rounded),
-                    prefixIconColor: Color.fromARGB(255, 115, 0, 138),
+                    prefixIconColor: const Color.fromARGB(255, 115, 0, 138),
                     hintStyle: const TextStyle(
                         color: Color.fromARGB(255, 201, 201, 201)),
                     suffixIcon: const Icon(Icons.close),
-                    suffixIconColor: Color.fromARGB(255, 115, 0, 138),
+                    suffixIconColor: const Color.fromARGB(255, 115, 0, 138),
                     enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                             color: Color.fromARGB(255, 115, 0, 138),
@@ -111,16 +112,16 @@ class _RegisterationState extends State<Registeration> {
               padding: const EdgeInsets.only(left: 70, right: 70),
               child: TextFormField(
                 style: const TextStyle(color: Color.fromARGB(255, 115, 0, 138)),
-                cursorColor: Color.fromARGB(255, 115, 0, 138),
+                cursorColor: const Color.fromARGB(255, 115, 0, 138),
                 decoration: InputDecoration(
                     hintText: "Contact# (i.e without 0)",
                     prefixIcon: const Icon(Icons.phone),
                     prefixText: "+92",
-                    prefixIconColor: Color.fromARGB(255, 115, 0, 138),
+                    prefixIconColor: const Color.fromARGB(255, 115, 0, 138),
                     hintStyle: const TextStyle(
                         color: Color.fromARGB(255, 201, 201, 201)),
                     suffixIcon: const Icon(Icons.close),
-                    suffixIconColor: Color.fromARGB(255, 115, 0, 138),
+                    suffixIconColor: const Color.fromARGB(255, 115, 0, 138),
                     enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                             color: Color.fromARGB(255, 115, 0, 138),
@@ -145,7 +146,7 @@ class _RegisterationState extends State<Registeration> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Home(),
+                          builder: (context) => const Home(),
                         ));
                   },
                   child: const Text(
