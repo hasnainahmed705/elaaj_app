@@ -50,7 +50,7 @@ class _SignupState extends State<Signup> {
               ),
             ),
             const SizedBox(
-              height: 60,
+              height: 10,
             ),
             const Center(
                 child: Icon(

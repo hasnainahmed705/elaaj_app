@@ -148,14 +148,10 @@ class _HomeState extends State<Home> {
                   color: Color.fromARGB(255, 115, 0, 138),
                 )),
             centerTitle: true,
-            title: const Text(
-              'Elaaj',
-              style: TextStyle(
-                fontSize: 25,
-                color: Color.fromARGB(255, 115, 0, 138),
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            title: SizedBox(
+                height: 25,
+                child: Image(
+                    image: AssetImage('lib/assets/images/final_logo_2.png'))),
             actions: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
