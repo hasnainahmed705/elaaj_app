@@ -42,7 +42,9 @@ class _HomePageState extends State<HomePage> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0)),
                       color: Color.fromARGB(255, 247, 247, 247),
-                      child: Container(),
+                      child: Container(
+                        color: Colors.yellow,
+                      ),
                     )),
               )
             ],
