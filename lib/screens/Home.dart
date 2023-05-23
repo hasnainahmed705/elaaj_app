@@ -4,6 +4,7 @@ import 'package:elaaj_app/screens/ContactUs.dart';
 import 'package:elaaj_app/screens/Homepage.dart';
 import 'package:elaaj_app/screens/Profile.dart';
 import 'package:elaaj_app/screens/Search.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -38,7 +39,48 @@ class _HomeState extends State<Home> {
             elevation: 5.0,
             backgroundColor: const Color.fromARGB(255, 115, 0, 138),
             child: const Icon(Icons.phone),
-            onPressed: () {}),
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return CupertinoAlertDialog(
+                    actions: [
+                      TextButton(
+                          onPressed: () {},
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              'Cancel',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 115, 0, 138)),
+                            ),
+                          )),
+                    ],
+                    title: Icon(
+                      size: 60,
+                      Icons.support_agent_sharp,
+                      color: Color.fromARGB(255, 115, 0, 138),
+                    ),
+                    content: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.resolveWith(
+                                  (states) => RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(0))),
+                              backgroundColor: MaterialStateColor.resolveWith(
+                                  (states) =>
+                                      Color.fromARGB(255, 115, 0, 138))),
+                          onPressed: () {},
+                          child: Text(
+                            '0303-6060314',
+                            style: TextStyle(color: Colors.white),
+                          )),
+                    ),
+                  );
+                },
+              );
+            }),
         drawer: Drawer(
             elevation: 5.0,
             backgroundColor: Colors.white,
@@ -178,7 +220,8 @@ class _HomeState extends State<Home> {
         bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Colors.white,
             elevation: 5.0,
-            showUnselectedLabels: true,
+            showSelectedLabels: true,
+            showUnselectedLabels: false,
             currentIndex: _currentIndex,
             onTap: onBottomNavTap,
             selectedItemColor: const Color.fromARGB(255, 115, 0, 138),
