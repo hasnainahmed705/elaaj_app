@@ -1,5 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -158,8 +159,8 @@ class _HomePageState extends State<HomePage> {
                         color: Color.fromARGB(255, 115, 0, 138)),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(
+                const Padding(
+                  padding: EdgeInsets.only(
                     top: 20.0,
                     right: 20.0,
                     left: 20.0,
@@ -169,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                       Expanded(
                           child: Card(
                         elevation: 5.0,
-                        child: Container(
+                        child: SizedBox(
                           height: 120,
                           child: Column(
                             children: [
@@ -198,7 +199,7 @@ class _HomePageState extends State<HomePage> {
                       Expanded(
                           child: Card(
                         elevation: 5.0,
-                        child: Container(
+                        child: SizedBox(
                           height: 120,
                           child: Column(
                             children: [
@@ -227,7 +228,7 @@ class _HomePageState extends State<HomePage> {
                       Expanded(
                           child: Card(
                         elevation: 5.0,
-                        child: Container(
+                        child: SizedBox(
                           height: 120,
                           child: Column(
                             children: [
@@ -268,14 +269,14 @@ class _HomePageState extends State<HomePage> {
                     onTap: () {},
                     child: Card(
                       elevation: 5.0,
-                      color: Color.fromARGB(255, 254, 250, 255),
-                      child: Container(
+                      color: const Color.fromARGB(255, 254, 250, 255),
+                      child: SizedBox(
                         height: 220,
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Column(
                             children: [
-                              Expanded(
+                              const Expanded(
                                   flex: 2,
                                   child: Image(
                                       width: 60,
@@ -287,42 +288,46 @@ class _HomePageState extends State<HomePage> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 15.0),
+                                      const Padding(
+                                        padding: EdgeInsets.only(left: 15.0),
                                         child: Text(
                                           '* Ask Anonymously',
                                           style: TextStyle(fontSize: 12),
                                         ),
                                       ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 15.0),
+                                      const Padding(
+                                        padding: EdgeInsets.only(left: 15.0),
                                         child: Text(
                                             '* Free & Ask question anytime',
                                             style: TextStyle(fontSize: 12)),
                                       ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 15.0),
+                                      const Padding(
+                                        padding: EdgeInsets.only(left: 15.0),
                                         child: Text(
                                             '* Get replied from PMC Verified doctors',
                                             style: TextStyle(fontSize: 12)),
                                       ),
-                                      SizedBox(height: 20.0),
+                                      const SizedBox(height: 20.0),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
                                           ElevatedButton(
                                               style: ButtonStyle(
+                                                  shape: MaterialStateProperty
+                                                      .resolveWith((states) =>
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          0))),
                                                   backgroundColor:
                                                       MaterialStateColor
                                                           .resolveWith(
                                                               (states) => Colors
                                                                   .white)),
                                               onPressed: () {},
-                                              child: Text(
+                                              child: const Text(
                                                 'View all messages',
                                                 style: TextStyle(
                                                     color: Color.fromARGB(
@@ -330,18 +335,25 @@ class _HomePageState extends State<HomePage> {
                                               )),
                                           ElevatedButton(
                                               style: ButtonStyle(
+                                                  shape: MaterialStateProperty
+                                                      .resolveWith((states) =>
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          0))),
                                                   backgroundColor:
                                                       MaterialStateColor
-                                                          .resolveWith(
-                                                              (states) => Color
-                                                                  .fromARGB(
-                                                                      255,
-                                                                      115,
-                                                                      0,
-                                                                      138))),
+                                                          .resolveWith((states) =>
+                                                              const Color
+                                                                      .fromARGB(
+                                                                  255,
+                                                                  115,
+                                                                  0,
+                                                                  138))),
                                               onPressed: () {},
-                                              child: Text(
-                                                'View all messages',
+                                              child: const Text(
+                                                'Ask Question',
                                                 style: TextStyle(
                                                     color: Colors.white),
                                               ))
@@ -349,6 +361,284 @@ class _HomePageState extends State<HomePage> {
                                       )
                                     ],
                                   ))
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 30, right: 30),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      elevation: 5.0,
+                      color: const Color.fromARGB(255, 115, 0, 138),
+                      child: SizedBox(
+                        height: 270,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: Text(
+                                  'Consult Online with Top Specialists',
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              const Text(
+                                'Anytime Anywhere',
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  const Column(
+                                    children: [
+                                      Image(
+                                          width: 80,
+                                          image: AssetImage(
+                                              'lib/assets/images/mobile_mockup.png'))
+                                    ],
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Icon(Icons.check,
+                                              color: Colors.green.shade800),
+                                          const Text('No Waiting, No Travel',
+                                              style: TextStyle(
+                                                  fontStyle: FontStyle.italic,
+                                                  fontSize: 12,
+                                                  color: Colors.white))
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(Icons.check,
+                                              color: Colors.green.shade800),
+                                          const Text(
+                                              'Secure & Refundable Payment',
+                                              style: TextStyle(
+                                                  fontStyle: FontStyle.italic,
+                                                  fontSize: 12,
+                                                  color: Colors.white))
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(Icons.check,
+                                              color: Colors.green.shade800),
+                                          const Text('Online Prescriptions',
+                                              style: TextStyle(
+                                                  fontStyle: FontStyle.italic,
+                                                  fontSize: 12,
+                                                  color: Colors.white))
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  ElevatedButton(
+                                      style: ButtonStyle(
+                                          shape: MaterialStateProperty
+                                              .resolveWith((states) =>
+                                                  RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              0))),
+                                          backgroundColor:
+                                              MaterialStateColor.resolveWith(
+                                                  (states) => Colors.white)),
+                                      onPressed: () {},
+                                      child: const Text('Consult Online',
+                                          style: TextStyle(
+                                            color: Color.fromARGB(
+                                                255, 115, 0, 138),
+                                          ))),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 30, right: 30),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      elevation: 5.0,
+                      color: Colors.white,
+                      child: SizedBox(
+                        height: 270,
+                        width: 450,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const Text('Book Lab Test',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 115, 0, 138),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold)),
+                              const CircleAvatar(
+                                radius: 40,
+                                backgroundImage: AssetImage(
+                                    'lib/assets/images/book_lab_test.jpg'),
+                              ),
+                              const Text('Trusted Lab Partners',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 115, 0, 138),
+                                      fontSize: 12,
+                                      fontStyle: FontStyle.italic)),
+                              ElevatedButton(
+                                  style: ButtonStyle(
+                                      shape: MaterialStateProperty.resolveWith(
+                                          (states) => RoundedRectangleBorder(
+                                              side: const BorderSide(
+                                                  color: Color.fromARGB(
+                                                      255, 115, 0, 138),
+                                                  width: 1.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(4))),
+                                      backgroundColor:
+                                          MaterialStateColor.resolveWith(
+                                              (states) => Colors.white)),
+                                  onPressed: () {},
+                                  child: const Text('Book Now',
+                                      style: TextStyle(
+                                        color: Color.fromARGB(255, 115, 0, 138),
+                                      ))),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(0)),
+                      elevation: 5.0,
+                      color: const Color.fromARGB(255, 115, 0, 138),
+                      child: const SizedBox(
+                        height: 200,
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            right: 30,
+                            left: 30,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Icon(Icons.verified_user_rounded,
+                                      size: 30, color: Colors.white),
+                                  Icon(Icons.headset_mic_rounded,
+                                      size: 30, color: Colors.white),
+                                  Icon(Icons.lock,
+                                      size: 30, color: Colors.white),
+                                ],
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text('PMC Verified Doctors',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontSize: 10)),
+                                          Text('10,000+ Doctors Available',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontSize: 10))
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text('12/7 Customer Support',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontSize: 10)),
+                                          Text('Well Trained & Supportive Team',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontSize: 10))
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text('Secure Online Payments',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontSize: 10)),
+                                          Text(
+                                              'We possess SSL/Secure Certificate',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontSize: 10))
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ],
                           ),
                         ),
